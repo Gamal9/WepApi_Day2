@@ -1,0 +1,41 @@
+﻿@using WepApi_Day2.Models
+@model List<Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAll</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div> 
+        <table class="table table-striped">
+            <thead>
+                <tr>ID</tr>
+                <tr>Name</tr>
+                <tr>Address</tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @item.CustomerID
+            </td>
+            <td>
+                @item.ContactName
+            </td>
+            <td>
+                @item.Address
+            </td>
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

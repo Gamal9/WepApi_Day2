@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: 'https://localhost:44335/api/customers',
+            method: 'GET',
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function (e) {
+                    alert("error");
+                }
+        })
+    })
+
+</script>
+<h2>Index</h2>
+
